@@ -1,0 +1,62 @@
+
+                         QualityCrowd
+ 
+I. Requirements
+---------------
+ * HTTP-Server, perferably Apache httpd
+ * A working HTTPS setup with a valid certifcate
+ * PHP, minimum 4.3.2, recommended >= 5.2
+ * Database (MySQL (>= 4), PostgreSQL, Microsoft SQL Server,
+   Oracle or SQLite)
+
+required for Amazon Mechanical Turk:
+ * JAVA runtime environment (e.g. OpenJDK)
+
+Qualitycrowd was tested with Apache httpd 2.2.14, PHP 5.3.1 and 
+MySQL 5.5.20
+
+
+II. Installation
+----------------
+ 1. Place all files in a directory inside your webservers document 
+    root
+
+ 2. All configuration is done in /app/config/ so copy all files ending
+ 	with .php.default and remove the .default part of the filename.
+ 	You can do this by running
+ 		./app/config/setup.sh
+
+ 3. Create an empty database and fill in the database credentials in
+ 	/app/config/database.php
+
+ 4. Set 'baseurl' in /app/config/general.php to the URL under which 
+ 	the application will be accessible via webbrowser.
+
+ 5. cd to your install directory and run 
+    	./cake/console/cake schema create
+    to create the database scheme
+
+ 6. Run the following SQL statement in your database to add an initial
+    user account:
+    	INSERT INTO `users` (`id`, `username`, `password`) VALUES
+    	(1, 'admin', 'ec08d2cec79f3bb56ac8b8b0ba95541c205c2841');
+
+ 7. The basic setup is ready and you should be able to log in using
+ 		username: admin
+ 		password: admin
+
+
+To use QualityCrowd with Mechanical Turk make you have to install the
+Mechanical Turl Command Line Tools 
+<http://aws.amazon.com/developertools/694> which is used as an API 
+wrapper. After that you can enable Mechanical Turk support in 
+/app/config/amazon.php. You can get the access and secret key from the
+AWS portal <https://aws-portal.amazon.com/gp/aws/securityCredentials>.
+
+Same thing is for Amazon S3 and Cloudfront support. Just fill in the 
+required parameters in /app/config/amazon.php. If you do not activate
+Amazon S3 the video files will be delivered by the QualityCrowd server.
+
+And last but not least to enabled the interface to CrowdFlower you can
+provide your credentials in /app/config/crowdflower.php and set 
+'cf.enabled' to true.

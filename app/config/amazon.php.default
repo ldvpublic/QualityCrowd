@@ -1,0 +1,23 @@
+<?php
+
+/* Amazon Mechanical Turk */
+Configure::write('mturk.enabled', false);
+
+Configure::write('mturk.javahome', '/usr');
+Configure::write('mturk.clipath', '/path/to/aws-cli/bin');
+Configure::write('mturk.accesskey', '**MTURK-ACCESSKEY**');
+Configure::write('mturk.secretkey', '**MTURK-SECRETKEY**');
+Configure::write('mturk.serviceurl', 'http://mechanicalturk.sandbox.amazonaws.com/?Service=AWSMechanicalTurkRequester');
+//Configure::write('mturk.serviceurl', 'http://mechanicalturk.amazonaws.com/?Service=AWSMechanicalTurkRequester');
+
+
+/* Amazon AWS S3/CloudFront */
+Configure::write('S3.enabled', false);
+
+Configure::write('S3.AccessKey', '**ACCESSKEY**');
+Configure::write('S3.SecretKey', '**SECRETKEY**');
+Configure::write('s3bucket', '**S3-BUCKET**');
+Configure::write('cloudfronturl', 'https://**fill in url**.cloudfront.net');
+
+
+?>

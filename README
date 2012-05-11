@@ -1,0 +1,42 @@
+
+                         QualityCrowd
+ 
+I. Description
+--------------
+
+Video quality assessment with subjective testing is both time 
+consuming and expensive. An interesting new approach to traditional 
+testing is the so-called crowdsourcing, moving the testing effort into
+the internet. We therefore propose in this contribution the 
+QualityCrowd framework to effortlessly perform subjective quality 
+assessment with crowdsourcing. QualityCrowd allows codec independent 
+quality assessment with a simple web interface, usable with common 
+web browsers.
+
+QualityCrowd interfaces with
+ * Amazon Mechanical Turk <https://www.mturk.com/>
+ * CloudFlower <http://www.crowdflower.com/>
+ * Amazon S3/CloudFront <http://aws.amazon.com/s3/>
+
+QualityCrowd is based on CakePHP 1.3 <http://www.cakephp.org/>, a nice
+PHP MVC framework.
+
+QualityCrowd is not a finished software product. It is rather ment as 
+an toolkit or framework and will surely need some further 
+customizations to fit your requirements.
+
+II. License
+-----------
+
+If you use QualityCrowd for your research project, please cite the 
+following paper in your publication:
+
+   C. Keimel, J. Habigt, C. Horch, and K. Diepold, "QualityCrowd - 
+   A Framework for Crowd-based Quality Evaluation," in Picture Coding 
+   Symposium 2012 (PCS 2012), May 2012, pp. 245-248
+
+Preprint: https://mediatum.ub.tum.de/doc/1098077/1098077.pdf
+BibTeX: https://mediatum.ub.tum.de/export/1098077/bibtex
+
+For the full license see the LICENSE file.
+

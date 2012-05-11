@@ -1,0 +1,9 @@
+<?php
+
+/* Crowdflower */
+Configure::write('cf.enabled', false);
+
+Configure::write('cf.apikey', '**CROWDFLOWER-APIKEY**');
+Configure::write('cf.apiurl', 'https://api.crowdflower.com/v1');
+
+?>

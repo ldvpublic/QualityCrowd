@@ -1,0 +1,6 @@
+<?php
+
+// base URL where the qualitycrowd frontend will be accessible
+Configure::write('baseurl', 'https://**FILL-IN**');
+
+?>

@@ -1,0 +1,18 @@
+<?php
+class DATABASE_CONFIG {
+	var $default = array(
+		'driver' 		=> 'mysql',
+		'persistent' 	=> false,
+		'host' 			=> '127.0.0.1',
+		'login'			=> 'qualitycrowd',
+		'password' 		=> '',
+		'database' 		=> 'qualitycrowd',
+		'prefix' 		=> '',
+	);
+
+ 	var $geoip = array(
+        	'datasource' => 'Geoip.freegeoip',
+        	'cache' => '+6 months',
+    	);
+}
+?>
